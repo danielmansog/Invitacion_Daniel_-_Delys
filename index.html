@@ -5,35 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda - Daniel y Delys</title>
     <style>
+        /* --- IMPORTAR FUENTES --- */
+        @import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Great+Vibes&display=swap');
+
         /* --- ESTILOS GENERALES --- */
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Tangerine', cursive;
             margin: 0;
             padding: 0;
             background-color: #FFFFFF;
             color: #333;
             line-height: 1.6;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             overflow: hidden;
             padding: 0 20px;
         }
-        h1, h2 {
-            font-family: 'Cormorant Garamond', serif; /* Una fuente elegante para títulos */
-            color: #DAA520; /* Un tono marrón siena */
+
+        /* --- TÍTULOS --- */
+        h1, h2, h3 {
+            font-family: 'Great Vibes', cursive; /* títulos elegantes */
+            color: #DAA520;
             text-align: center;
         }
+
+        h1 { font-size: 4.5rem; margin: 0; }
+        h2 { font-size: 3rem; }
+        h3 { font-size: 2rem; }
+
+        /* --- PÁRRAFOS --- */
+        p, .rsvp-button, #countdown div span, #countdown div p {
+            font-family: 'Tangerine', cursive;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+
         section {
             padding: 40px 0;
             border-bottom: 1px solid #eee;
         }
 
-        /* --- ENCABEZADO (HERO) --- */
+        /* --- HERO --- */
         .hero {
-            /* CAMBIA ESTO: Pon aquí el enlace a tu foto principal */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url('./fotos/portada.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('./fotos/portada.jpg');
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
@@ -45,16 +65,9 @@
             color: white;
             text-align: center;
         }
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .hero p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
+
+        .hero h1 { font-size: 5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 2rem; margin-top: 10px; }
 
         /* --- CUENTA REGRESIVA --- */
         #countdown {
@@ -66,37 +79,26 @@
             padding: 10px;
             border-radius: 10px;
         }
-        #countdown div {
-            text-align: center;
-        }
-        #countdown div span {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        #countdown div p {
-            font-size: 0.9rem;
-            margin: 0;
-            text-transform: uppercase;
-        }
+
+        #countdown div { text-align: center; }
+        #countdown div span { display: block; font-size: 2rem; font-weight: bold; }
+        #countdown div p { font-size: 1.2rem; margin: 0; text-transform: uppercase; }
 
         /* --- BOTÓN RSVP --- */
         .rsvp-button {
             display: inline-block;
-            background-color: #DAA520; /* Color dorado */
+            background-color: #DAA520;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-top: 30px;
             transition: background-color 0.3s ease;
         }
-        .rsvp-button:hover {
-            background-color: #DAA520; /* Dorado más oscuro */
-        }
-        
-        /* --- OTRAS SECCIONES --- */
+        .rsvp-button:hover { background-color: #b8860b; }
+
+        /* --- DETALLES DEL EVENTO --- */
         .event-details {
             display: flex;
             justify-content: space-around;
@@ -109,7 +111,7 @@
             padding: 20px;
         }
         .event-details i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #DAA520;
             margin-bottom: 10px;
         }
@@ -127,10 +129,8 @@
             border-radius: 5px;
             transition: transform 0.3s ease;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        
+        .gallery img:hover { transform: scale(1.05); }
+
         /* --- FOOTER --- */
         footer {
             text-align: center;
@@ -138,23 +138,29 @@
             background: #f4f4f4;
         }
 
-        /* --- Fuentes de Google y Iconos --- */
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            h3 { font-size: 1.8rem; }
+            p, .rsvp-button, #countdown div span, #countdown div p { font-size: 1.5rem; }
+        }
+
     </style>
-    <!-- Para los iconos (ej. iglesia, copa) -->
+
+    <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- ======== ENCABEZADO Y FOTO PRINCIPAL ======== -->
-    <!-- CAMBIA LOS NOMBRES Y LA FECHA AQUÍ -->
+    <!-- HERO -->
     <header class="hero">
         <p>NOS CASAMOS</p>
         <h1>Daniel</h1>
-		<h1>&</h1>
-		<h1>Delys</h1>
+        <h1>&</h1>
+        <h1>Delys</h1>
         <p>14 de marzo del 2026</p>
-        
+
         <!-- CUENTA REGRESIVA -->
         <div id="countdown">
             <div><span id="days">00</span><p>Días</p></div>
@@ -165,47 +171,39 @@
     </header>
 
     <main class="container">
-        <!-- ======== NUESTRA HISTORIA ======== -->
+        <!-- HISTORIA -->
         <section id="historia">
             <h2>Nuestra Historia</h2>
-            <!-- CAMBIA ESTO: Escribe aquí un párrafo sobre ustedes -->
             <p>
                 Nuestra historia comenzó hace más de cuatro años, y desde entonces hemos vivido un camino lleno de amor y momentos inolvidables. Hemos construido un amor que sigue creciendo con el tiempo, y ahora queremos celebrarlo con quienes más queremos. Por eso, nos haría mucha ilusión que tú, que eres tan especial para nosotros, nos acompañes en este día tan importante.
-			</p>
+            </p>
         </section>
 
-        <!-- ======== DETALLES DEL EVENTO ======== -->
+        <!-- DETALLES -->
         <section id="detalles">
             <h2>Detalles del Evento</h2>
             <div class="event-details">
-                
                 <div>
                     <i class="fas fa-glass-cheers"></i>
                     <h3>Recepción</h3>
-                    <p><strong>Hora:</strong> 19:30</p>
+                    <p><strong>Hora:</strong> 17:30</p>
                     <p><strong>Lugar:</strong> Finca "La Montaña"</p>
                     <p>Av. Amazonas Central, 2, 4, 28300 Aranjuez, Madrid</p>
-                    <a href="https://maps.app.goo.gl/Ww7sgto8JkBK6Zva8" target="_blank" 
-                       style="display: inline-block; margin-top: 10px; background-color: #DAA520; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-                       Ver en el Mapa
-                    </a>
+                    <a href="https://maps.app.goo.gl/Ww7sgto8JkBK6Zva8" target="_blank" class="rsvp-button">Ver en el Mapa</a>
                 </div>
-                
                 <div>
                     <i class="fas fa-tshirt"></i>
                     <h3>Código de Vestimenta</h3>
-                    <!-- CAMBIA ESTO: El código de vestimenta -->
                     <p><strong>Formal</strong></p>
                     <p>Queremos que todos se vean y sientan espectaculares.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ======== GALERÍA DE FOTOS ======== -->
+        <!-- GALERÍA -->
         <section id="galeria">
             <h2>Galería</h2>
             <div class="gallery">
-                <!-- CAMBIA ESTO: Pon enlaces a tus fotos. Puedes añadir más o menos. -->
                 <img src="./fotos/foto1.jpg" alt="Foto de la pareja 1">
                 <img src="./fotos/foto2.jpg" alt="Foto de la pareja 2">
                 <img src="./fotos/foto3.jpg" alt="Foto de la pareja 3">
@@ -213,14 +211,12 @@
             </div>
         </section>
 
-        <!-- ======== RSVP (Confirmar Asistencia) ======== -->
+        <!-- RSVP -->
         <section id="rsvp" style="text-align: center;">
             <h2>Confirmar Asistencia</h2>
-            <p>Acompañanos en este día tan especial. <br>Por favor, confirma antes del <strong>31 de diciembre del 2025</strong>.</p>
-            <!-- CAMBIA ESTO: Pega aquí el enlace a tu Formulario de Google -->
+            <p>Acompáñanos en este día tan especial. <br>Por favor, confirma antes del <strong>31 de diciembre del 2025</strong>.</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_K_uEbnmN7yRgVSpNso2nlSvC0yM_nJS4GAj3RpOPlKNjLQ/viewform?usp=header" target="_blank" class="rsvp-button">Confirmar aquí</a>
         </section>
-
     </main>
 
     <footer>
@@ -228,34 +224,26 @@
     </footer>
 
     <script>
-        // --- LÓGICA DE LA CUENTA REGRESIVA ---
-
-        // CAMBIA ESTO: Pon la fecha y hora de tu boda. Formato: "Mes dia, año hh:mm:ss"
+        // CUENTA REGRESIVA
         const countDownDate = new Date("Mar 14, 2026 17:00:00").getTime();
-
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
-
-            // Cálculos de tiempo
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Mostrar el resultado en los elementos con su ID
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            document.getElementById("days").innerText = days.toString().padStart(2,'0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2,'0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2,'0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2,'0');
 
-            // Si la cuenta regresiva termina
-            if (distance < 0) {
+            if(distance < 0){
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "<h2>¡Llegó el gran día!</h2>";
             }
         }, 1000);
     </script>
-
 </body>
 </html>
